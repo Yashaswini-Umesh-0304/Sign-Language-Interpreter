@@ -3,8 +3,8 @@
 A web-based application that interprets American Sign Language (ASL) gestures in real-time using Computer Vision and Machine Learning. The system translates hand gestures into text and speech, facilitating communication for the hearing and speech impaired.
 
 <p align="center">
-  <img src="assets/ui_screenshot1.jpg" width="45%" alt="Detection of Letter G">
-  <img src="assets/ui_screenshot2.jpg" width="45%" alt="Detection of I Love You Phrase">
+  <img src="assets/ui_screenshot1.png" width="45%" alt="Detection of Letter G">
+  <img src="assets/ui_screenshot2.png" width="45%" alt="Detection of I Love You Phrase">
 </p>
 
 ## 🌟 Features
