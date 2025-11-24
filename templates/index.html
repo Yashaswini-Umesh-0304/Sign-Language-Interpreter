@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Sign2Text - Sign Language to Text Translation</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="" name="keywords" />
+    <meta content="" name="description" />
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Raleway:wght@600;800&display=swap" rel="stylesheet" />
+
+    <!-- Icon Font Stylesheet -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />
+
+    <!-- Libraries Stylesheet -->
+    <link href="https://krishnaraj12.github.io/project/lib/lightbox/css/lightbox.min.css" rel="stylesheet" />
+    <link href="https://krishnaraj12.github.io/project/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="https://krishnaraj12.github.io/project/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Template Stylesheet -->
+    <link href="https://krishnaraj12.github.io/project/css/style.css" rel="stylesheet" />
+</head>
+
+<style>
+    /* Resetting */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+    }
+
+    body {
+        min-height: 100vh;
+        background: linear-gradient(to bottom, #000428, #004683);
+    }
+
+    .wrapper {
+        margin-top: 100px;
+    }
+
+    .wrapper .grid .container-lg-4 {
+        display: flex;
+        justify-content: center;
+    }
+
+    .hero-header1,
+    .page-header {
+        margin-top: 101px !important;
+    }
+
+    .hero-header1 {
+        background: linear-gradient(rgb(219 234 253 / 24%), rgb(116 89 122 / 19%)),
+            url("https://coolbackgrounds.io/images/backgrounds/index/ranger-4df6c1b6.png");
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+    }
+
+/* Centering and Styling the Subtitle */
+    .container.text-center h4 {
+        font-size: 2.0rem; /* Adjust the font size for the subtitle */
+        font-weight: 400;
+        color: #fff; /* Ensure text is white for better visibility */
+        text-align: center;
+        margin-top: 100px; /* Adjust the top margin to position it below the header */
+        margin-bottom: 30px; /* Space between subtitle and content */
+    }
+
+    .navbar-brand h1 {
+        font-size: 5.5rem; /* Make the title larger */
+        font-weight: 800;
+        color: #007bff;
+    }
+
+    /* Image Carousel and Video Feed in Row */
+    .carousel-item img, .video-feed img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+        border: 2px solid #000;
+    }
+
+    .carousel-inner {
+        display: flex;
+        justify-content: center;
+    }
+
+    .carousel-item {
+        display: none;
+    }
+
+    .carousel-item.active {
+        display: block;
+    }
+
+    .carousel-control-prev, .carousel-control-next {
+        color: #007bff;
+    }
+
+    .controls {
+        display: flex;
+        align-items: center;
+        margin-top: 20px;
+    }
+
+    .controls input {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .controls button {
+        margin-left: 10px;
+    }
+
+    /* Layout Flexbox for Video and Images */
+    .row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    /* Make images side-by-side */
+    .col-md-12.col-lg-6 {
+        flex: 1;
+    }
+
+    .col-md-12.col-lg-6 img {
+        max-width: 100%;
+    }
+</style>
+
+<body>
+    <!-- Navbar start -->
+    <div class="container-fluid fixed-top" style="position: absolute; top: 0; left: 0; width: 100%; display: flex; justify-content: center; z-index: 1030;">
+        <div class="container px-0" style="display: flex; justify-content: center; width: 100%">
+            <nav class="navbar navbar-light bg-white navbar-expand-lg" style="width: auto; display: flex; align-items: center; justify-content: center;">
+                <a href="#" class="navbar-brand" style="display: flex; align-items: center; text-decoration: none">
+                    <h1 class="text-primary display-6" style="margin: 0;">
+                        SIGN LANGUAGE INTERPRETER
+                    </h1>
+                </a>
+            </nav>
+        </div>
+    </div>
+    <!-- Navbar End -->
+
+    <!-- Subtitle Text below the header -->
+<div class="container text-center py-4">
+    <h4 class="text-white">Convert Sign Language to Text and Speech Live</h4>
+</div>
+
+    <div class="container-fluid py-5 mb-5 hero-header1">
+        <div class="container py-5">
+            <div class="row g-5 align-items-center">
+                <!-- Image Carousel Column -->
+                <div class="col-md-12 col-lg-6">                    
+                    <!-- Carousel -->
+                    <div id="carouselId" class="carousel slide position-relative" data-bs-interval="false">
+                        <div class="carousel-inner" role="listbox">
+                            <div class="carousel-item active rounded">
+                                <img src="{{ url_for('static', filename='hand-signs-of-the-ASL-Language-1.png') }}" class="img-fluid w-100 h-100 bg-secondary rounded" alt="First slide" />
+                            </div>
+                            <div class="carousel-item rounded">
+                                <img src="{{ url_for('static', filename='hand-signs-of-the-ASL-Language-2.jpg') }}" class="img-fluid w-100 h-100 bg-secondary rounded" alt="Second slide" />
+                            </div>
+                        </div>
+                        <!-- Carousel Controls -->
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselId" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselId" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Video Feed Column -->
+                <div class="col-md-12 col-lg-6">
+                    <img src="{{ url_for('video_feed') }}" class="img-fluid w-100 h-100 bg-secondary rounded" alt="Video Feed" />
+                    <!-- Controls -->
+                    <div class="controls d-flex align-items-center mt-3">
+                        <input type="text" id="translatedText" class="form-control me-2" placeholder="Translated text will appear here" aria-label="Translated text">
+                        <button type="button" id="resetButton" class="btn btn-danger me-2">Reset</button>
+                        <button type="button" id="speakButton" class="btn btn-primary">Speak</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Disable automatic cycling
+        var carouselElement = document.getElementById("carouselId");
+        var carousel = new bootstrap.Carousel(carouselElement, {
+            interval: false,
+            wrap: false,
+        });
+    </script>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="https://krishnaraj12.github.io/project/lib/lightbox/js/lightbox.min.js"></script>
+    <script src="https://krishnaraj12.github.io/project/lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="https://krishnaraj12.github.io/project/js/main.js"></script>
+
+    <!-- Socket.io -->
+    <script src="https://cdn.socket.io/4.0.1/socket.io.min.js"></script>
+    <script>
+        const socket = io();
+
+        // Update the translatedText input with the prediction
+        socket.on('prediction', function (data) {
+            const translatedText = document.getElementById('translatedText');
+            translatedText.value = data.text;
+        });
+
+        // Reset button functionality
+        document.getElementById('resetButton').addEventListener('click', function () {
+            document.getElementById('translatedText').value = '';
+        });
+
+        document.getElementById('speakButton').addEventListener('click', function() {
+      const text = document.getElementById('translatedText').value;
+      const utterance = new SpeechSynthesisUtterance(text);
+      
+      // Set voice and speed
+      const voices = speechSynthesis.getVoices();
+      utterance.voice = voices.find(voice => voice.name === 'Google UK English Female') || voices[0]; // Choose a specific voice
+      utterance.rate = 1.0; // Speed (0.1 to 10)
+      
+      speechSynthesis.speak(utterance);
+    });
+    </script>
+</body>
+
+</html>
