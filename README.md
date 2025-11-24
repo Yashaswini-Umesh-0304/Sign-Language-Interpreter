@@ -58,7 +58,11 @@ If you wish to retrain the model with your own gestures:
 ## 📷 Gestures Supported
 The model is trained on the standard ASL alphabet and specific phrases:
 
-![ASL Chart](static/hand-signs-of-the-ASL-Language-1.png)
+<p align="center">
+  <img src="static/hand-signs-of-the-ASL-Language-1.png" alt="ASL Alphabet" width="100%">
+  <br><br>
+  <img src="static/hand-signs-of-the-ASL-Language-2.jpg" alt="ASL Common Phrases" width="100%">
+</p>
 
 * **Alphabet:** A-Z
 * **Phrases:** Hello, Done, Thank You, I Love You, Sorry, Please, You are welcome.
