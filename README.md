@@ -33,7 +33,7 @@ A web-based application that interprets American Sign Language (ASL) gestures in
 
 1.  **Clone the repository:**
     ```bash
-    git clone [https://github.com/YOUR_USERNAME/Sign-Language-Interpreter.git](https://github.com/YOUR_USERNAME/Sign-Language-Interpreter.git)
+    git clone https://github.com/Yashaswini-Umesh-0304/Sign-Language-Interpreter.git
     cd Sign-Language-Interpreter
     ```
 
